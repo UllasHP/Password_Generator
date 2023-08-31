@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    <style>
+      /*style for the generator form*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+/*footer*/
+
+        footer {
+            background-color: #080808;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #faf8f8;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form method="POST">
+            <label for="length" style="color: red;">Password Length:</label>
+            <input type="number" id="length" name="length" min="1" required>
+            <button type="submit">Generate Password</button>
+        </form>
+        <p style="color: green;">Generated Password: {{ generated_password }}</p>
+    </div>
+    <footer>
+      <p>&copy; Designed By Ullas H P</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/mr_uls/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-128.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/in/ullashp/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" alt="LinkedIn"></a>
+          <a href="https://github.com/UllasHP" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/GitHub-64.png" alt="GitHub"></a>
+      </div>
+  </footer>
+</body>
+</html>
